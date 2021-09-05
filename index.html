@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mesecni Budzet</title>
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <!-- prikaz ukupnih prihoda, rashoda i stanja na racunu -->
+    <div class="main">
+      <div class="prikaz">
+        <div class="prikaz_title">
+          <h1>Budzet Za Ovaj Mesec:</h1>
+        </div>
+        <!-- prikaz stanja na racunu -->
+        <div class="prikaz_stanje">
+          <p id="balans">0</p>
+        </div>
+        <!-- prikaz ukupnih prihoda -->
+        <div class="prikaz_ukupniPrihod">
+          <div class="ukupniPrihod_wrapper">
+            <div class="rec">
+              <p>Prihod</p>
+            </div>
+            <div class="iznos">
+              <p><span>+ </span><span id="ukupniPrihodCifra">0</span></p>
+            </div>
+            <div class="procenat_prihod"></div>
+          </div>
+        </div>
+        <!-- prikaz ukupnih rashoda -->
+        <div class="prikaz_ukupniRashod">
+          <div class="ukupniRashod_wrapper">
+            <div class="rec">
+              <p>Rashod</p>
+            </div>
+            <div class="iznos">
+              <p><span>- </span> <span id="ukupniRashodCifra">0</span> </p>
+            </div>
+            <div class="procenat_rashod">
+              <p class="procenat_rashod_cifra">0%</p>
+            </div>  
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- forma za unos -->
+    <div class="form_wrapper">
+      <form class="form">
+        <div class="tip">
+          <select name="tip" id="tip" required >
+            <option value="" selected disabled>
+              Transakcija
+            </option>
+            <option value="Prihod">Prihod</option>
+            <option value="Rashod">Rashod</option>
+          </select>
+        </div>
+        <div class="opis">
+          <input type="text" placeholder="Opis" id="opis" required />
+        </div>
+        <div class="iznos">
+          <input type="number" placeholder="Iznos" id="iznos" required />
+        </div>
+        <div class="unos">
+          <button type="submit" class="submit">&#x2714</button>
+        </div>
+      </form>
+    </div>
+    <!-- div za obavestenja o greskama -->
+    <div class="alert">
+      <p id="alert-text"></p>
+    </div>
+    <!-- liste pojedinacnih prihoda i rashoda -->
+    <div class="liste">
+      <!-- sekcija prihoda -->
+        <div class="prihodi">
+            <div class="lista_prihoda_kontejner">
+                <h2>Lista Prihoda</h2>
+                <hr>
+                <div class="lista_prihoda"></div>
+            </div>
+        </div>
+        <!-- sekcija rashoda -->
+        <div class="rashodi">
+            <div class="lista_rashoda_kontejner">
+                <h2>Lista Rashoda</h2>
+                <hr>
+                <div class="lista_rashoda"></div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./src/index.js"></script>
+  </body>
+</html>
