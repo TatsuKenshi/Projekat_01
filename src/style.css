@@ -165,12 +165,12 @@ body {
   color: white;
 }
 .prihodi {
-  width: 50vw;
+  width: 50%;
   height: 580px;
   background: teal;
 }
 .rashodi {
-  width: 50vw;
+  width: 50%;
   height: 580px;
   background: indianred;
 }
@@ -182,7 +182,6 @@ body {
   margin-right: 100px;
   padding-left: 5px;
   padding-right: 5px;
-
 }
 
 .lista_rashoda_kontejner {
@@ -202,7 +201,7 @@ body {
   background: rgba(211, 147, 147, 0.5);
   color: white;
 }
-.jedanUnos{
+.jedanUnos {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -228,7 +227,7 @@ body {
 }
 
 .alert {
-  background:rgb(248, 248, 238);
+  background: rgb(248, 248, 238);
   color: indianred;
   font-size: 1.5rem;
   margin-left: auto;
