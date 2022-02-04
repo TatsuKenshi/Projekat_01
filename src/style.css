@@ -16,25 +16,21 @@ body {
 
 .prikaz {
   height: inherit;
-  width: 768px;
-  margin-left: auto;
-  margin-right: auto;
+  max-width: 768px;
+  margin: 0 auto;
   color: white;
 }
 
 .prikaz_title {
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   padding-top: 20px;
 }
 
 .prikaz_stanje {
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  margin: 0 auto;
+  padding: 10px 0;
   font-size: 3.5rem;
 }
 
@@ -47,45 +43,28 @@ body {
   display: flex;
   justify-content: center;
   width: 50%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   background: teal;
   justify-content: space-between;
 }
 
 .rec {
   font-size: 1.5rem;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-left: 10px;
+  padding: 10px 0 10px 10px;
   align-self: center;
 }
 
 .iznos {
   font-size: 1.5rem;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 10px 0;
   align-self: center;
 }
 
 .procenat_prihod {
   font-size: 1rem;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding: 2px 5px;
   margin-right: 10px;
   align-self: center;
-}
-.procenat_rashod {
-  font-size: 1rem;
-  padding-top: 2px;
-  padding-bottom: 2px;
-  padding-left: 5px;
-  padding-right: 5px;
-  margin-right: 10px;
-  align-self: center;
-  background: rgba(211, 147, 147, 0.5);
 }
 
 .prikaz_ukupniRashod {
@@ -97,26 +76,31 @@ body {
   display: flex;
   justify-content: center;
   width: 50%;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   background: rgb(205, 92, 92);
   justify-content: space-between;
 }
 
+.procenat_rashod {
+  font-size: 1rem;
+  padding: 2px 5px;
+  margin-right: 10px;
+  align-self: center;
+  background: rgba(211, 147, 147, 0.5);
+}
+
 .form_wrapper {
   height: 100px;
-  width: 100vw;
+  width: 100%;
   background: rgb(248, 248, 238);
   justify-content: center;
 }
 
 .form {
+  display: flex;
   height: inherit;
-  width: 1000px;
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  display: flex;
+  width: max-content;
+  margin: 0 auto;
   justify-content: center;
   align-items: center;
 }
@@ -124,32 +108,29 @@ body {
 #tip {
   height: 50px;
   font-size: 1rem;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 0 10px 0 20px;
+  margin-right: 10px;
 }
 
 #opis {
   height: 48px;
   width: 500px;
   font-size: 1rem;
-  padding-left: 20px;
-  margin-left: 10px;
+  padding: 0 10px 0 20px;
   margin-right: 10px;
 }
+
 #iznos {
   height: 48px;
   width: 96px;
   font-size: 1rem;
-  padding-left: 20px;
-  margin-right: 20px;
+  padding: 0 10px 0 20px;
+  margin-right: 10px;
 }
 
 .submit {
   font-size: 1rem;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-right: 9px;
-  padding-left: 9px;
+  padding: 5px 9px;
   background: white;
   border-radius: 50%;
   border: solid 1px indianred;
@@ -157,7 +138,7 @@ body {
 }
 
 .liste {
-  display: inline-flex;
+  display: flex;
   width: 100vw;
 }
 
@@ -166,31 +147,27 @@ body {
 }
 .prihodi {
   width: 50%;
-  height: 580px;
+  min-height: 580px;
   background: teal;
+  padding-top: 50px;
 }
 .rashodi {
   width: 50%;
-  height: 580px;
+  min-height: 580px;
   background: indianred;
+  padding-top: 50px;
 }
 
 .lista_prihoda_kontejner {
-  margin-top: 100px;
-  float: right;
-  width: 400px;
-  margin-right: 100px;
-  padding-left: 5px;
-  padding-right: 5px;
+  margin: auto;
+  max-width: 500px;
+  padding: 0 5px;
 }
 
 .lista_rashoda_kontejner {
-  margin-top: 100px;
-  margin-left: 100px;
-  float: left;
-  width: 400px;
-  padding-left: 5px;
-  padding-right: 5px;
+  margin: auto;
+  max-width: 500px;
+  padding: 0 5px;
 }
 
 .obrisi {
@@ -233,4 +210,67 @@ body {
   margin-left: auto;
   margin-right: auto;
   text-align: center;
+}
+
+@media only screen and (max-width: 1024px) {
+  #opis {
+    width: 375px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .ukupniPrihod_wrapper,
+  .ukupniRashod_wrapper {
+    width: 75%;
+  }
+
+  #opis {
+    width: 270px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .main {
+    height: max-content;
+    padding-bottom: 20px;
+  }
+
+  .ukupniPrihod_wrapper,
+  .ukupniRashod_wrapper {
+    width: 90%;
+  }
+
+  .form_wrapper {
+    height: max-content;
+  }
+
+  .form {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  #tip,
+  #opis,
+  #iznos {
+    width: 90%;
+    margin: 10px auto;
+    padding: 0;
+  }
+
+  .submit {
+    width: 90%;
+    height: 40px;
+    border-radius: 0;
+    margin-bottom: 10px;
+  }
+
+  .liste {
+    display: block;
+  }
+
+  .prihodi,
+  .rashodi {
+    width: 100%;
+  }
 }
